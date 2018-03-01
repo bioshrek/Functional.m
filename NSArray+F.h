@@ -39,3 +39,8 @@
 
     + (NSArray *) arrayFrom:(NSInteger) from To:(NSInteger) to;
 @end
+
+NSArray* unfold(BOOL (^p)(NSUInteger),
+				NSUInteger (^h)(NSUInteger),
+				NSUInteger (^t)(NSUInteger),
+				NSUInteger x);

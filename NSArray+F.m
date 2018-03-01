@@ -122,3 +122,25 @@
 
 
 @end
+
+
+NSArray* unfold(BOOL (^p)(NSUInteger),
+				NSUInteger (^h)(NSUInteger),
+				NSUInteger (^t)(NSUInteger),
+				NSUInteger x)
+{
+	if (NULL == p ||
+		NULL == h ||
+		NULL == t) {
+		return @[];
+	}
+	
+	if (p(x)) {
+		return @[];
+	} else {
+		NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
+		[mutableArray addObject:@(h(x))];
+		[mutableArray addObjectsFromArray:unfold(p, h, t, t(x))];
+		return mutableArray;
+	}
+}
