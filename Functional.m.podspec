@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'Functional.m'
-  s.version      = '1.0.0'
+  s.version      = '1.0.1'
   s.summary      = 'Categories for functional programming in Objective-C.'
   s.description  = 'Functional.m is an extension for objective-c, that can be used to do functional programming.'
   s.homepage     = 'https://github.com/bioshrek/Functional.m'
